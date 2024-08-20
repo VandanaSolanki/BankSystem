@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bank</title>
+    </head>
+    <body>
+        <h1> Enter a number to check Even or Odd </h1><hr>
+        {% if data %}
+
+        {{data | safe}}
+
+        {% endif %}
+        <form action="/external/" method="POST">
+            {%csrf_token%}
+            Text:
+            <input type="text" name="input1" required><br>
+            <br>
+            <input type="submit" value="execute">
+        </form><br>
+        <br>
+        {{data1}}
+    </body>
+
+</html>
